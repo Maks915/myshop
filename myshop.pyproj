@@ -1,0 +1,161 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>myshop</Name>
+    <RootNamespace>myshop</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e0d371eb-5549-4b96-8547-4b97b0de0852</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>myshop.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="cart\admin.py" />
+    <Compile Include="cart\apps.py" />
+    <Compile Include="cart\cart.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cart\context_processors.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cart\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cart\migrations\__init__.py" />
+    <Compile Include="cart\models.py" />
+    <Compile Include="cart\tests.py" />
+    <Compile Include="cart\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="cart\views.py" />
+    <Compile Include="cart\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="myshop\__init__.py" />
+    <Compile Include="myshop\settings.py" />
+    <Compile Include="myshop\urls.py" />
+    <Compile Include="myshop\wsgi.py" />
+    <Compile Include="orders\admin.py" />
+    <Compile Include="orders\apps.py" />
+    <Compile Include="orders\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders\migrations\__init__.py" />
+    <Compile Include="orders\models.py" />
+    <Compile Include="orders\tests.py" />
+    <Compile Include="orders\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="orders\views.py" />
+    <Compile Include="orders\__init__.py" />
+    <Compile Include="shop\admin.py" />
+    <Compile Include="shop\apps.py" />
+    <Compile Include="shop\migrations\__init__.py" />
+    <Compile Include="shop\models.py" />
+    <Compile Include="shop\tests.py" />
+    <Compile Include="shop\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="shop\views.py" />
+    <Compile Include="shop\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cart\templates\cart\detail.html" />
+    <Content Include="cart\templates\cart\index.html" />
+    <Content Include="orders\templates\orders\index.html" />
+    <Content Include="orders\templates\orders\order\create.html" />
+    <Content Include="orders\templates\orders\order\created.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="shop\templates\shop\base.html" />
+    <Content Include="shop\templates\shop\index.html" />
+    <Content Include="shop\templates\shop\product\detail.html" />
+    <Content Include="shop\templates\shop\product\list.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="cart\" />
+    <Folder Include="cart\migrations\" />
+    <Folder Include="cart\templates\" />
+    <Folder Include="cart\templates\cart\" />
+    <Folder Include="myshop\" />
+    <Folder Include="orders\" />
+    <Folder Include="orders\migrations\" />
+    <Folder Include="orders\templates\" />
+    <Folder Include="orders\templates\orders\" />
+    <Folder Include="orders\templates\orders\order\" />
+    <Folder Include="shop\" />
+    <Folder Include="shop\migrations\" />
+    <Folder Include="shop\templates\" />
+    <Folder Include="shop\templates\shop\" />
+    <Folder Include="shop\templates\shop\product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
